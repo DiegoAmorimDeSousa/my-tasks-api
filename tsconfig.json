@@ -8,12 +8,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": "./src",
+    "baseUrl": ".", // ALTERADO AQUI: De "./src" para "." (raiz do projeto)
     "paths": {
-      "@domain/*": ["domain/*"],
-      "@application/*": ["application/*"],
-      "@infrastructure/*": ["infrastructure/*"],
-      "@config/*": ["config/*"]
+      "@domain/*": ["./src/domain/*"], // ALTERADO AQUI: Adicionado "./src/"
+      "@application/*": ["./src/application/*"], // ALTERADO AQUI: Adicionado "./src/"
+      "@infrastructure/*": ["./src/infrastructure/*"], // ALTERADO AQUI: Adicionado "./src/"
+      "@config/*": ["./src/config/*"] // ALTERADO AQUI: Adicionado "./src/"
     }
   },
   "include": ["src/**/*.ts"],
