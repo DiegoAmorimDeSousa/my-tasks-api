@@ -2,20 +2,21 @@
   "compilerOptions": {
     "target": "es2021",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./", // CORRIGIDO AQUI: rootDir deve ser a raiz do projeto
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": "./", // CORRIGIDO AQUI: Base URL deve ser a raiz do projeto
+    "declaration": false, // Adicionado para garantir que não procure por .d.ts para seus próprios módulos
+    "baseUrl": "./", // Base URL deve ser a raiz do projeto
     "paths": {
-      "@domain/*": ["src/domain/*"], // CORRIGIDO AQUI: Caminhos são relativos ao baseUrl (raiz do projeto, apontando para src)
+      "@domain/*": ["src/domain/*"], // Caminhos são relativos ao baseUrl (raiz do projeto, apontando para src)
       "@application/*": ["src/application/*"],
       "@infrastructure/*": ["src/infrastructure/*"],
       "@config/*": ["src/config/*"]
     }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts"], // Inclui apenas os arquivos TypeScript na pasta src
+  "exclude": ["node_modules", "dist"] // Exclui node_modules e a pasta de saída
 }
