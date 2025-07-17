@@ -8,12 +8,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": "./src", // CORRIGIDO AQUI: Base URL deve ser o diretório raiz dos seus fontes
+    "baseUrl": "./", // CORRIGIDO AQUI: Base URL deve ser a raiz do projeto
     "paths": {
-      "@domain/*": ["domain/*"], // CORRIGIDO AQUI: Caminhos são relativos ao baseUrl (src)
-      "@application/*": ["application/*"],
-      "@infrastructure/*": ["infrastructure/*"],
-      "@config/*": ["config/*"]
+      "@domain/*": ["src/domain/*"], // CORRIGIDO AQUI: Caminhos são relativos ao baseUrl (raiz do projeto, apontando para src)
+      "@application/*": ["src/application/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@config/*": ["src/config/*"]
     }
   },
   "include": ["src/**/*.ts"],
