@@ -8,9 +8,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": "./dist", // ALTERADO AQUI: Base URL agora aponta para o diretório de saída
+    "baseUrl": "./src", // CORRIGIDO AQUI: Base URL deve ser o diretório raiz dos seus fontes
     "paths": {
-      "@domain/*": ["domain/*"], // ALTERADO AQUI: Caminhos agora são relativos ao novo baseUrl (dist)
+      "@domain/*": ["domain/*"], // CORRIGIDO AQUI: Caminhos são relativos ao baseUrl (src)
       "@application/*": ["application/*"],
       "@infrastructure/*": ["infrastructure/*"],
       "@config/*": ["config/*"]
