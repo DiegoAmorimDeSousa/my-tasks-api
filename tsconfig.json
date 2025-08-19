@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      // Estes caminhos instruem o 'tsconfig-paths' a procurar os módulos compilados
-      // diretamente dentro da pasta 'dist' quando os aliases são encontrados.
-      "@domain/*": ["dist/domain/*"],
-      "@application/*": ["dist/application/*"],
-      "@infrastructure/*": ["dist/infrastructure/*"],
-      "@config/*": ["dist/config/*"]
-    }
-  }
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
